@@ -191,7 +191,8 @@ public class MainActivity extends AppCompatActivity implements HotelAdapter.IHot
             mList.remove(itemPos);
             if (isFiltered) mListAll.remove(mListMapFilter.get(itemPos).intValue());
             mAdapter.notifyDataSetChanged();
-            Snackbar.make(findViewById(R.id.fab), hotel.judul + " Terhapus", Snackbar.LENGTH_LONG).setAction("UNDO", new View.OnClickListener() {
+            Snackbar.make(findViewById(R.id.fab), hotel.judul +
+                    " Terhapus", Snackbar.LENGTH_LONG).setAction("UNDO", new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
                         mList.add(itemPos, hotel);
